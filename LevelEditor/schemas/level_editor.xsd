@@ -25,12 +25,12 @@
   <xs:complexType name="sxtState">
     <xs:annotation>
       <xs:appinfo>
-        <LeGe.NativeType nativeName="Locator"/>
+        <LeGe.NativeType nativeName="GameObject"/>
         <scea.dom.editors name="SXT State" category="SXT Objects" image="LevelEditorCore.Resources.Document16.png" menuText="SXT State" description="SXT State"/>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="locatorType">
+      <xs:extension base="gameObjectType">
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -38,12 +38,12 @@
   <xs:complexType name="sxtPhysics">
     <xs:annotation>
       <xs:appinfo>
-        <LeGe.NativeType nativeName="Locator"/>
+        <LeGe.NativeType nativeName="GameObjectGroup"/>
         <scea.dom.editors name="SXT Physics" category="SXT Objects" image="LevelEditorCore.Resources.ExtensionManip16.png" menuText="SXT Physics" description="SXT Physics"/>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="locatorType">
+      <xs:extension base="gameObjectGroupType">
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
