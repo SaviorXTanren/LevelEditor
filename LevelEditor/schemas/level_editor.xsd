@@ -7,6 +7,60 @@
 
   <xs:include schemaLocation="gap.xsd"/>
 
+  <!-- Custom SXT Engine Types -->
+
+  <xs:complexType name="sxtGameObject">
+    <xs:annotation>
+      <xs:appinfo>
+        <LeGe.NativeType nativeName="GameObjectGroup"/>
+        <scea.dom.editors name="SXT GameObject" category="SXT Objects" image="LevelEditorCore.Resources.cubes.png" menuText="SXT GameObject" description="SXT GameObject"/>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="gameObjectGroupType">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="sxtState">
+    <xs:annotation>
+      <xs:appinfo>
+        <LeGe.NativeType nativeName="Locator"/>
+        <scea.dom.editors name="SXT State" category="SXT Objects" image="LevelEditorCore.Resources.Document16.png" menuText="SXT State" description="SXT State"/>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="locatorType">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="sxtPhysics">
+    <xs:annotation>
+      <xs:appinfo>
+        <LeGe.NativeType nativeName="Locator"/>
+        <scea.dom.editors name="SXT Physics" category="SXT Objects" image="LevelEditorCore.Resources.ExtensionManip16.png" menuText="SXT Physics" description="SXT Physics"/>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="locatorType">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="sxtGraphics">
+    <xs:annotation>
+      <xs:appinfo>
+        <LeGe.NativeType nativeName="Locator"/>
+        <scea.dom.editors name="SXT Graphics" category="SXT Objects" image="LevelEditorCore.Resources.PolyMesh.png" menuText="SXT Graphics" description="SXT Graphics"/>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="locatorType">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
 
     <!-- Render component, a game component that contains or generate renderable geometry-->
     <xs:complexType name="renderComponentType" abstract="true">
@@ -454,7 +508,7 @@
         <xs:sequence>
           <xs:element name="geometry" type="modelReferenceType" minOccurs="0" maxOccurs="1" />
           <xs:element name="animation" type="resourceReferenceType" minOccurs="0" maxOccurs="1"/>
-          <xs:element name="target" type="gameObjectReferenceType" minOccurs="0" maxOccurs="1" />
+          <xs:element name="target" type="gameObjectType" minOccurs="0" maxOccurs="1" />
           <xs:element name="friends" type="gameObjectReferenceType" minOccurs="0" maxOccurs="unbounded" />
           <xs:element name="children" type="orcType" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>

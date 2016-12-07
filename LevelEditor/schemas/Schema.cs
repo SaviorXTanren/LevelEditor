@@ -167,6 +167,99 @@ namespace LevelEditor
             prefabInstanceType.gameObjectChild = prefabInstanceType.Type.GetChildInfo("gameObject");
             prefabInstanceType.objectOverrideChild = prefabInstanceType.Type.GetChildInfo("objectOverride");
 
+            sxtGameObject.Type = getNodeType("gap", "sxtGameObject");
+            sxtGameObject.transformAttribute = sxtGameObject.Type.GetAttributeInfo("transform");
+            sxtGameObject.translateAttribute = sxtGameObject.Type.GetAttributeInfo("translate");
+            sxtGameObject.rotateAttribute = sxtGameObject.Type.GetAttributeInfo("rotate");
+            sxtGameObject.scaleAttribute = sxtGameObject.Type.GetAttributeInfo("scale");
+            sxtGameObject.pivotAttribute = sxtGameObject.Type.GetAttributeInfo("pivot");
+            sxtGameObject.nameAttribute = sxtGameObject.Type.GetAttributeInfo("name");
+            sxtGameObject.visibleAttribute = sxtGameObject.Type.GetAttributeInfo("visible");
+            sxtGameObject.lockedAttribute = sxtGameObject.Type.GetAttributeInfo("locked");
+            sxtGameObject.transformationTypeAttribute = sxtGameObject.Type.GetAttributeInfo("transformationType");
+            sxtGameObject.componentChild = sxtGameObject.Type.GetChildInfo("component");
+            sxtGameObject.gameObjectChild = sxtGameObject.Type.GetChildInfo("gameObject");
+
+            sxtState.Type = getNodeType("gap", "sxtState");
+            sxtState.transformAttribute = sxtState.Type.GetAttributeInfo("transform");
+            sxtState.translateAttribute = sxtState.Type.GetAttributeInfo("translate");
+            sxtState.rotateAttribute = sxtState.Type.GetAttributeInfo("rotate");
+            sxtState.scaleAttribute = sxtState.Type.GetAttributeInfo("scale");
+            sxtState.pivotAttribute = sxtState.Type.GetAttributeInfo("pivot");
+            sxtState.nameAttribute = sxtState.Type.GetAttributeInfo("name");
+            sxtState.visibleAttribute = sxtState.Type.GetAttributeInfo("visible");
+            sxtState.lockedAttribute = sxtState.Type.GetAttributeInfo("locked");
+            sxtState.transformationTypeAttribute = sxtState.Type.GetAttributeInfo("transformationType");
+            sxtState.componentChild = sxtState.Type.GetChildInfo("component");
+            sxtState.resourceChild = sxtState.Type.GetChildInfo("resource");
+            sxtState.stmRefChild = sxtState.Type.GetChildInfo("stmRef");
+
+            locatorType.Type = getNodeType("gap", "locatorType");
+            locatorType.transformAttribute = locatorType.Type.GetAttributeInfo("transform");
+            locatorType.translateAttribute = locatorType.Type.GetAttributeInfo("translate");
+            locatorType.rotateAttribute = locatorType.Type.GetAttributeInfo("rotate");
+            locatorType.scaleAttribute = locatorType.Type.GetAttributeInfo("scale");
+            locatorType.pivotAttribute = locatorType.Type.GetAttributeInfo("pivot");
+            locatorType.nameAttribute = locatorType.Type.GetAttributeInfo("name");
+            locatorType.visibleAttribute = locatorType.Type.GetAttributeInfo("visible");
+            locatorType.lockedAttribute = locatorType.Type.GetAttributeInfo("locked");
+            locatorType.transformationTypeAttribute = locatorType.Type.GetAttributeInfo("transformationType");
+            locatorType.componentChild = locatorType.Type.GetChildInfo("component");
+            locatorType.resourceChild = locatorType.Type.GetChildInfo("resource");
+            locatorType.stmRefChild = locatorType.Type.GetChildInfo("stmRef");
+
+            modelReferenceType.Type = getNodeType("gap", "modelReferenceType");
+            modelReferenceType.uriAttribute = modelReferenceType.Type.GetAttributeInfo("uri");
+            modelReferenceType.tagAttribute = modelReferenceType.Type.GetAttributeInfo("tag");
+
+            stateMachineRefType.Type = getNodeType("gap", "stateMachineRefType");
+            stateMachineRefType.uriAttribute = stateMachineRefType.Type.GetAttributeInfo("uri");
+            stateMachineRefType.flatPropertyTableChild = stateMachineRefType.Type.GetChildInfo("flatPropertyTable");
+
+            flatPropertyTableType.Type = getNodeType("gap", "flatPropertyTableType");
+            flatPropertyTableType.propertyChild = flatPropertyTableType.Type.GetChildInfo("property");
+
+            propertyType.Type = getNodeType("gap", "propertyType");
+            propertyType.scopeAttribute = propertyType.Type.GetAttributeInfo("scope");
+            propertyType.typeAttribute = propertyType.Type.GetAttributeInfo("type");
+            propertyType.absolutePathAttribute = propertyType.Type.GetAttributeInfo("absolutePath");
+            propertyType.propertyNameAttribute = propertyType.Type.GetAttributeInfo("propertyName");
+            propertyType.defaultValueAttribute = propertyType.Type.GetAttributeInfo("defaultValue");
+            propertyType.valueAttribute = propertyType.Type.GetAttributeInfo("value");
+            propertyType.minValueAttribute = propertyType.Type.GetAttributeInfo("minValue");
+            propertyType.maxValueAttribute = propertyType.Type.GetAttributeInfo("maxValue");
+            propertyType.descriptionAttribute = propertyType.Type.GetAttributeInfo("description");
+            propertyType.categoryAttribute = propertyType.Type.GetAttributeInfo("category");
+            propertyType.warningAttribute = propertyType.Type.GetAttributeInfo("warning");
+
+            sxtPhysics.Type = getNodeType("gap", "sxtPhysics");
+            sxtPhysics.transformAttribute = sxtPhysics.Type.GetAttributeInfo("transform");
+            sxtPhysics.translateAttribute = sxtPhysics.Type.GetAttributeInfo("translate");
+            sxtPhysics.rotateAttribute = sxtPhysics.Type.GetAttributeInfo("rotate");
+            sxtPhysics.scaleAttribute = sxtPhysics.Type.GetAttributeInfo("scale");
+            sxtPhysics.pivotAttribute = sxtPhysics.Type.GetAttributeInfo("pivot");
+            sxtPhysics.nameAttribute = sxtPhysics.Type.GetAttributeInfo("name");
+            sxtPhysics.visibleAttribute = sxtPhysics.Type.GetAttributeInfo("visible");
+            sxtPhysics.lockedAttribute = sxtPhysics.Type.GetAttributeInfo("locked");
+            sxtPhysics.transformationTypeAttribute = sxtPhysics.Type.GetAttributeInfo("transformationType");
+            sxtPhysics.componentChild = sxtPhysics.Type.GetChildInfo("component");
+            sxtPhysics.resourceChild = sxtPhysics.Type.GetChildInfo("resource");
+            sxtPhysics.stmRefChild = sxtPhysics.Type.GetChildInfo("stmRef");
+
+            sxtGraphics.Type = getNodeType("gap", "sxtGraphics");
+            sxtGraphics.transformAttribute = sxtGraphics.Type.GetAttributeInfo("transform");
+            sxtGraphics.translateAttribute = sxtGraphics.Type.GetAttributeInfo("translate");
+            sxtGraphics.rotateAttribute = sxtGraphics.Type.GetAttributeInfo("rotate");
+            sxtGraphics.scaleAttribute = sxtGraphics.Type.GetAttributeInfo("scale");
+            sxtGraphics.pivotAttribute = sxtGraphics.Type.GetAttributeInfo("pivot");
+            sxtGraphics.nameAttribute = sxtGraphics.Type.GetAttributeInfo("name");
+            sxtGraphics.visibleAttribute = sxtGraphics.Type.GetAttributeInfo("visible");
+            sxtGraphics.lockedAttribute = sxtGraphics.Type.GetAttributeInfo("locked");
+            sxtGraphics.transformationTypeAttribute = sxtGraphics.Type.GetAttributeInfo("transformationType");
+            sxtGraphics.componentChild = sxtGraphics.Type.GetChildInfo("component");
+            sxtGraphics.resourceChild = sxtGraphics.Type.GetChildInfo("resource");
+            sxtGraphics.stmRefChild = sxtGraphics.Type.GetChildInfo("stmRef");
+
             renderComponentType.Type = getNodeType("gap", "renderComponentType");
             renderComponentType.nameAttribute = renderComponentType.Type.GetAttributeInfo("name");
             renderComponentType.activeAttribute = renderComponentType.Type.GetAttributeInfo("active");
@@ -194,44 +287,6 @@ namespace LevelEditor
             spinnerComponentType.nameAttribute = spinnerComponentType.Type.GetAttributeInfo("name");
             spinnerComponentType.activeAttribute = spinnerComponentType.Type.GetAttributeInfo("active");
             spinnerComponentType.rpsAttribute = spinnerComponentType.Type.GetAttributeInfo("rps");
-
-            modelReferenceType.Type = getNodeType("gap", "modelReferenceType");
-            modelReferenceType.uriAttribute = modelReferenceType.Type.GetAttributeInfo("uri");
-            modelReferenceType.tagAttribute = modelReferenceType.Type.GetAttributeInfo("tag");
-
-            locatorType.Type = getNodeType("gap", "locatorType");
-            locatorType.transformAttribute = locatorType.Type.GetAttributeInfo("transform");
-            locatorType.translateAttribute = locatorType.Type.GetAttributeInfo("translate");
-            locatorType.rotateAttribute = locatorType.Type.GetAttributeInfo("rotate");
-            locatorType.scaleAttribute = locatorType.Type.GetAttributeInfo("scale");
-            locatorType.pivotAttribute = locatorType.Type.GetAttributeInfo("pivot");
-            locatorType.nameAttribute = locatorType.Type.GetAttributeInfo("name");
-            locatorType.visibleAttribute = locatorType.Type.GetAttributeInfo("visible");
-            locatorType.lockedAttribute = locatorType.Type.GetAttributeInfo("locked");
-            locatorType.transformationTypeAttribute = locatorType.Type.GetAttributeInfo("transformationType");
-            locatorType.componentChild = locatorType.Type.GetChildInfo("component");
-            locatorType.resourceChild = locatorType.Type.GetChildInfo("resource");
-            locatorType.stmRefChild = locatorType.Type.GetChildInfo("stmRef");
-
-            stateMachineRefType.Type = getNodeType("gap", "stateMachineRefType");
-            stateMachineRefType.uriAttribute = stateMachineRefType.Type.GetAttributeInfo("uri");
-            stateMachineRefType.flatPropertyTableChild = stateMachineRefType.Type.GetChildInfo("flatPropertyTable");
-
-            flatPropertyTableType.Type = getNodeType("gap", "flatPropertyTableType");
-            flatPropertyTableType.propertyChild = flatPropertyTableType.Type.GetChildInfo("property");
-
-            propertyType.Type = getNodeType("gap", "propertyType");
-            propertyType.scopeAttribute = propertyType.Type.GetAttributeInfo("scope");
-            propertyType.typeAttribute = propertyType.Type.GetAttributeInfo("type");
-            propertyType.absolutePathAttribute = propertyType.Type.GetAttributeInfo("absolutePath");
-            propertyType.propertyNameAttribute = propertyType.Type.GetAttributeInfo("propertyName");
-            propertyType.defaultValueAttribute = propertyType.Type.GetAttributeInfo("defaultValue");
-            propertyType.valueAttribute = propertyType.Type.GetAttributeInfo("value");
-            propertyType.minValueAttribute = propertyType.Type.GetAttributeInfo("minValue");
-            propertyType.maxValueAttribute = propertyType.Type.GetAttributeInfo("maxValue");
-            propertyType.descriptionAttribute = propertyType.Type.GetAttributeInfo("description");
-            propertyType.categoryAttribute = propertyType.Type.GetAttributeInfo("category");
-            propertyType.warningAttribute = propertyType.Type.GetAttributeInfo("warning");
 
             DirLight.Type = getNodeType("gap", "DirLight");
             DirLight.transformAttribute = DirLight.Type.GetAttributeInfo("transform");
@@ -800,6 +855,126 @@ namespace LevelEditor
             public static ChildInfo objectOverrideChild;
         }
 
+        public static class sxtGameObject
+        {
+            public static DomNodeType Type;
+            public static AttributeInfo transformAttribute;
+            public static AttributeInfo translateAttribute;
+            public static AttributeInfo rotateAttribute;
+            public static AttributeInfo scaleAttribute;
+            public static AttributeInfo pivotAttribute;
+            public static AttributeInfo nameAttribute;
+            public static AttributeInfo visibleAttribute;
+            public static AttributeInfo lockedAttribute;
+            public static AttributeInfo transformationTypeAttribute;
+            public static ChildInfo componentChild;
+            public static ChildInfo gameObjectChild;
+        }
+
+        public static class sxtState
+        {
+            public static DomNodeType Type;
+            public static AttributeInfo transformAttribute;
+            public static AttributeInfo translateAttribute;
+            public static AttributeInfo rotateAttribute;
+            public static AttributeInfo scaleAttribute;
+            public static AttributeInfo pivotAttribute;
+            public static AttributeInfo nameAttribute;
+            public static AttributeInfo visibleAttribute;
+            public static AttributeInfo lockedAttribute;
+            public static AttributeInfo transformationTypeAttribute;
+            public static ChildInfo componentChild;
+            public static ChildInfo resourceChild;
+            public static ChildInfo stmRefChild;
+        }
+
+        public static class locatorType
+        {
+            public static DomNodeType Type;
+            public static AttributeInfo transformAttribute;
+            public static AttributeInfo translateAttribute;
+            public static AttributeInfo rotateAttribute;
+            public static AttributeInfo scaleAttribute;
+            public static AttributeInfo pivotAttribute;
+            public static AttributeInfo nameAttribute;
+            public static AttributeInfo visibleAttribute;
+            public static AttributeInfo lockedAttribute;
+            public static AttributeInfo transformationTypeAttribute;
+            public static ChildInfo componentChild;
+            public static ChildInfo resourceChild;
+            public static ChildInfo stmRefChild;
+        }
+
+        public static class modelReferenceType
+        {
+            public static DomNodeType Type;
+            public static AttributeInfo uriAttribute;
+            public static AttributeInfo tagAttribute;
+        }
+
+        public static class stateMachineRefType
+        {
+            public static DomNodeType Type;
+            public static AttributeInfo uriAttribute;
+            public static ChildInfo flatPropertyTableChild;
+        }
+
+        public static class flatPropertyTableType
+        {
+            public static DomNodeType Type;
+            public static ChildInfo propertyChild;
+        }
+
+        public static class propertyType
+        {
+            public static DomNodeType Type;
+            public static AttributeInfo scopeAttribute;
+            public static AttributeInfo typeAttribute;
+            public static AttributeInfo absolutePathAttribute;
+            public static AttributeInfo propertyNameAttribute;
+            public static AttributeInfo defaultValueAttribute;
+            public static AttributeInfo valueAttribute;
+            public static AttributeInfo minValueAttribute;
+            public static AttributeInfo maxValueAttribute;
+            public static AttributeInfo descriptionAttribute;
+            public static AttributeInfo categoryAttribute;
+            public static AttributeInfo warningAttribute;
+        }
+
+        public static class sxtPhysics
+        {
+            public static DomNodeType Type;
+            public static AttributeInfo transformAttribute;
+            public static AttributeInfo translateAttribute;
+            public static AttributeInfo rotateAttribute;
+            public static AttributeInfo scaleAttribute;
+            public static AttributeInfo pivotAttribute;
+            public static AttributeInfo nameAttribute;
+            public static AttributeInfo visibleAttribute;
+            public static AttributeInfo lockedAttribute;
+            public static AttributeInfo transformationTypeAttribute;
+            public static ChildInfo componentChild;
+            public static ChildInfo resourceChild;
+            public static ChildInfo stmRefChild;
+        }
+
+        public static class sxtGraphics
+        {
+            public static DomNodeType Type;
+            public static AttributeInfo transformAttribute;
+            public static AttributeInfo translateAttribute;
+            public static AttributeInfo rotateAttribute;
+            public static AttributeInfo scaleAttribute;
+            public static AttributeInfo pivotAttribute;
+            public static AttributeInfo nameAttribute;
+            public static AttributeInfo visibleAttribute;
+            public static AttributeInfo lockedAttribute;
+            public static AttributeInfo transformationTypeAttribute;
+            public static ChildInfo componentChild;
+            public static ChildInfo resourceChild;
+            public static ChildInfo stmRefChild;
+        }
+
         public static class renderComponentType
         {
             public static DomNodeType Type;
@@ -835,59 +1010,6 @@ namespace LevelEditor
             public static AttributeInfo nameAttribute;
             public static AttributeInfo activeAttribute;
             public static AttributeInfo rpsAttribute;
-        }
-
-        public static class modelReferenceType
-        {
-            public static DomNodeType Type;
-            public static AttributeInfo uriAttribute;
-            public static AttributeInfo tagAttribute;
-        }
-
-        public static class locatorType
-        {
-            public static DomNodeType Type;
-            public static AttributeInfo transformAttribute;
-            public static AttributeInfo translateAttribute;
-            public static AttributeInfo rotateAttribute;
-            public static AttributeInfo scaleAttribute;
-            public static AttributeInfo pivotAttribute;
-            public static AttributeInfo nameAttribute;
-            public static AttributeInfo visibleAttribute;
-            public static AttributeInfo lockedAttribute;
-            public static AttributeInfo transformationTypeAttribute;
-            public static ChildInfo componentChild;
-            public static ChildInfo resourceChild;
-            public static ChildInfo stmRefChild;
-        }
-
-        public static class stateMachineRefType
-        {
-            public static DomNodeType Type;
-            public static AttributeInfo uriAttribute;
-            public static ChildInfo flatPropertyTableChild;
-        }
-
-        public static class flatPropertyTableType
-        {
-            public static DomNodeType Type;
-            public static ChildInfo propertyChild;
-        }
-
-        public static class propertyType
-        {
-            public static DomNodeType Type;
-            public static AttributeInfo scopeAttribute;
-            public static AttributeInfo typeAttribute;
-            public static AttributeInfo absolutePathAttribute;
-            public static AttributeInfo propertyNameAttribute;
-            public static AttributeInfo defaultValueAttribute;
-            public static AttributeInfo valueAttribute;
-            public static AttributeInfo minValueAttribute;
-            public static AttributeInfo maxValueAttribute;
-            public static AttributeInfo descriptionAttribute;
-            public static AttributeInfo categoryAttribute;
-            public static AttributeInfo warningAttribute;
         }
 
         public static class DirLight
