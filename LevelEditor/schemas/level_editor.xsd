@@ -27,10 +27,14 @@
       <xs:appinfo>
         <LeGe.NativeType nativeName="GameObject"/>
         <scea.dom.editors name="SXT State" category="SXT Objects" image="LevelEditorCore.Resources.Document16.png" menuText="SXT State" description="SXT State"/>
+        <scea.dom.editors.attribute name="stateScript" displayName="Script" description="The script for the state" editor="Sce.Atf.Controls.PropertyEditing.FileUriEditor,Atf.Gui.WinForms:Python Script (*.py)|*.py"/>
+        <scea.dom.editors.attribute name="stateData" displayName="Data" description="The data for the State"/>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="gameObjectType">
+        <xs:attribute name="stateScript" type="xs:anyURI"/>
+        <xs:attribute name="stateData" type="xs:string" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

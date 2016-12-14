@@ -1,0 +1,1 @@
+GenSchemaDef.bat level_editor.xsd Schema.cs gap LevelEditor

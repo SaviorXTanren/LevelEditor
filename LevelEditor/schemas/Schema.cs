@@ -190,6 +190,8 @@ namespace LevelEditor
             sxtState.visibleAttribute = sxtState.Type.GetAttributeInfo("visible");
             sxtState.lockedAttribute = sxtState.Type.GetAttributeInfo("locked");
             sxtState.transformationTypeAttribute = sxtState.Type.GetAttributeInfo("transformationType");
+            sxtState.stateScriptAttribute = sxtState.Type.GetAttributeInfo("stateScript");
+            sxtState.stateDataAttribute = sxtState.Type.GetAttributeInfo("stateData");
             sxtState.componentChild = sxtState.Type.GetChildInfo("component");
 
             sxtPhysics.Type = getNodeType("gap", "sxtPhysics");
@@ -880,6 +882,8 @@ namespace LevelEditor
             public static AttributeInfo visibleAttribute;
             public static AttributeInfo lockedAttribute;
             public static AttributeInfo transformationTypeAttribute;
+            public static AttributeInfo stateScriptAttribute;
+            public static AttributeInfo stateDataAttribute;
             public static ChildInfo componentChild;
         }
 

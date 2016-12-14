@@ -153,7 +153,8 @@
       <DependentUpon>CreateTerrainDlg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="schemas\gap.xsd">
-      <SubType></SubType>
+      <SubType>
+      </SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Terrain\CreateTerrainMapDlg.resx">
       <DependentUpon>CreateTerrainMapDlg.cs</DependentUpon>
@@ -163,10 +164,12 @@
     </EmbeddedResource>
     <None Include="schemas\GenSchemaDef.bat" />
     <EmbeddedResource Include="schemas\level_editor.xsd">
-      <SubType></SubType>
+      <SubType>
+      </SubType>
     </EmbeddedResource>
     <Compile Include="SchemaLoader.cs" />
     <Compile Include="schemas\Schema.cs" />
+    <None Include="schemas\RegenerateSchema.bat" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ATF\Framework\Atf.Core\Atf.Core.vs2010.csproj">
