@@ -9,6 +9,24 @@
 
   <!-- Custom SXT Engine Types -->
 
+  <xs:complexType name="sxtBasicGameObject">
+    <xs:annotation>
+      <xs:appinfo>
+        <LeGe.NativeType nativeName="Locator"/>
+        <scea.dom.editors name="SXT Basic GameObject" category="SXT Objects" image="LevelEditorCore.Resources.game.png" menuText="SXT Basic GameObject" description="SXT Basic GameObject"/>
+        <scea.dom.editors.attribute name="type" displayName="Type" description="The type of SXT GameObject"/>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="locatorType">
+        <xs:sequence>
+          <xs:element name="target" type="gameObjectType" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="type" type="xs:string" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
   <xs:complexType name="sxtGameObject">
     <xs:annotation>
       <xs:appinfo>
