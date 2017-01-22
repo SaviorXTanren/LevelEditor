@@ -177,8 +177,10 @@ namespace LevelEditor
             sxtGameObject.visibleAttribute = sxtGameObject.Type.GetAttributeInfo("visible");
             sxtGameObject.lockedAttribute = sxtGameObject.Type.GetAttributeInfo("locked");
             sxtGameObject.transformationTypeAttribute = sxtGameObject.Type.GetAttributeInfo("transformationType");
+            sxtGameObject.typeAttribute = sxtGameObject.Type.GetAttributeInfo("type");
             sxtGameObject.componentChild = sxtGameObject.Type.GetChildInfo("component");
             sxtGameObject.gameObjectChild = sxtGameObject.Type.GetChildInfo("gameObject");
+            sxtGameObject.targetChild = sxtGameObject.Type.GetChildInfo("target");
 
             sxtState.Type = getNodeType("gap", "sxtState");
             sxtState.transformAttribute = sxtState.Type.GetAttributeInfo("transform");
@@ -205,21 +207,8 @@ namespace LevelEditor
             sxtPhysics.lockedAttribute = sxtPhysics.Type.GetAttributeInfo("locked");
             sxtPhysics.transformationTypeAttribute = sxtPhysics.Type.GetAttributeInfo("transformationType");
             sxtPhysics.componentChild = sxtPhysics.Type.GetChildInfo("component");
-            sxtPhysics.gameObjectChild = sxtPhysics.Type.GetChildInfo("gameObject");
-
-            sxtGraphics.Type = getNodeType("gap", "sxtGraphics");
-            sxtGraphics.transformAttribute = sxtGraphics.Type.GetAttributeInfo("transform");
-            sxtGraphics.translateAttribute = sxtGraphics.Type.GetAttributeInfo("translate");
-            sxtGraphics.rotateAttribute = sxtGraphics.Type.GetAttributeInfo("rotate");
-            sxtGraphics.scaleAttribute = sxtGraphics.Type.GetAttributeInfo("scale");
-            sxtGraphics.pivotAttribute = sxtGraphics.Type.GetAttributeInfo("pivot");
-            sxtGraphics.nameAttribute = sxtGraphics.Type.GetAttributeInfo("name");
-            sxtGraphics.visibleAttribute = sxtGraphics.Type.GetAttributeInfo("visible");
-            sxtGraphics.lockedAttribute = sxtGraphics.Type.GetAttributeInfo("locked");
-            sxtGraphics.transformationTypeAttribute = sxtGraphics.Type.GetAttributeInfo("transformationType");
-            sxtGraphics.componentChild = sxtGraphics.Type.GetChildInfo("component");
-            sxtGraphics.resourceChild = sxtGraphics.Type.GetChildInfo("resource");
-            sxtGraphics.stmRefChild = sxtGraphics.Type.GetChildInfo("stmRef");
+            sxtPhysics.resourceChild = sxtPhysics.Type.GetChildInfo("resource");
+            sxtPhysics.stmRefChild = sxtPhysics.Type.GetChildInfo("stmRef");
 
             locatorType.Type = getNodeType("gap", "locatorType");
             locatorType.transformAttribute = locatorType.Type.GetAttributeInfo("transform");
@@ -258,6 +247,20 @@ namespace LevelEditor
             propertyType.descriptionAttribute = propertyType.Type.GetAttributeInfo("description");
             propertyType.categoryAttribute = propertyType.Type.GetAttributeInfo("category");
             propertyType.warningAttribute = propertyType.Type.GetAttributeInfo("warning");
+
+            sxtGraphics.Type = getNodeType("gap", "sxtGraphics");
+            sxtGraphics.transformAttribute = sxtGraphics.Type.GetAttributeInfo("transform");
+            sxtGraphics.translateAttribute = sxtGraphics.Type.GetAttributeInfo("translate");
+            sxtGraphics.rotateAttribute = sxtGraphics.Type.GetAttributeInfo("rotate");
+            sxtGraphics.scaleAttribute = sxtGraphics.Type.GetAttributeInfo("scale");
+            sxtGraphics.pivotAttribute = sxtGraphics.Type.GetAttributeInfo("pivot");
+            sxtGraphics.nameAttribute = sxtGraphics.Type.GetAttributeInfo("name");
+            sxtGraphics.visibleAttribute = sxtGraphics.Type.GetAttributeInfo("visible");
+            sxtGraphics.lockedAttribute = sxtGraphics.Type.GetAttributeInfo("locked");
+            sxtGraphics.transformationTypeAttribute = sxtGraphics.Type.GetAttributeInfo("transformationType");
+            sxtGraphics.componentChild = sxtGraphics.Type.GetChildInfo("component");
+            sxtGraphics.resourceChild = sxtGraphics.Type.GetChildInfo("resource");
+            sxtGraphics.stmRefChild = sxtGraphics.Type.GetChildInfo("stmRef");
 
             renderComponentType.Type = getNodeType("gap", "renderComponentType");
             renderComponentType.nameAttribute = renderComponentType.Type.GetAttributeInfo("name");
@@ -866,8 +869,10 @@ namespace LevelEditor
             public static AttributeInfo visibleAttribute;
             public static AttributeInfo lockedAttribute;
             public static AttributeInfo transformationTypeAttribute;
+            public static AttributeInfo typeAttribute;
             public static ChildInfo componentChild;
             public static ChildInfo gameObjectChild;
+            public static ChildInfo targetChild;
         }
 
         public static class sxtState
@@ -888,22 +893,6 @@ namespace LevelEditor
         }
 
         public static class sxtPhysics
-        {
-            public static DomNodeType Type;
-            public static AttributeInfo transformAttribute;
-            public static AttributeInfo translateAttribute;
-            public static AttributeInfo rotateAttribute;
-            public static AttributeInfo scaleAttribute;
-            public static AttributeInfo pivotAttribute;
-            public static AttributeInfo nameAttribute;
-            public static AttributeInfo visibleAttribute;
-            public static AttributeInfo lockedAttribute;
-            public static AttributeInfo transformationTypeAttribute;
-            public static ChildInfo componentChild;
-            public static ChildInfo gameObjectChild;
-        }
-
-        public static class sxtGraphics
         {
             public static DomNodeType Type;
             public static AttributeInfo transformAttribute;
@@ -971,6 +960,23 @@ namespace LevelEditor
             public static AttributeInfo descriptionAttribute;
             public static AttributeInfo categoryAttribute;
             public static AttributeInfo warningAttribute;
+        }
+
+        public static class sxtGraphics
+        {
+            public static DomNodeType Type;
+            public static AttributeInfo transformAttribute;
+            public static AttributeInfo translateAttribute;
+            public static AttributeInfo rotateAttribute;
+            public static AttributeInfo scaleAttribute;
+            public static AttributeInfo pivotAttribute;
+            public static AttributeInfo nameAttribute;
+            public static AttributeInfo visibleAttribute;
+            public static AttributeInfo lockedAttribute;
+            public static AttributeInfo transformationTypeAttribute;
+            public static ChildInfo componentChild;
+            public static ChildInfo resourceChild;
+            public static ChildInfo stmRefChild;
         }
 
         public static class renderComponentType

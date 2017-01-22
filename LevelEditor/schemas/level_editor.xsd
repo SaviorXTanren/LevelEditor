@@ -14,10 +14,15 @@
       <xs:appinfo>
         <LeGe.NativeType nativeName="GameObjectGroup"/>
         <scea.dom.editors name="SXT GameObject" category="SXT Objects" image="LevelEditorCore.Resources.cubes.png" menuText="SXT GameObject" description="SXT GameObject"/>
+        <scea.dom.editors.attribute name="type" displayName="Type" description="The type of SXT GameObject"/>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="gameObjectGroupType">
+        <xs:sequence>
+          <xs:element name="target" type="gameObjectType" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+        <xs:attribute name="type" type="xs:string" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -42,12 +47,12 @@
   <xs:complexType name="sxtPhysics">
     <xs:annotation>
       <xs:appinfo>
-        <LeGe.NativeType nativeName="GameObjectGroup"/>
+        <LeGe.NativeType nativeName="Locator"/>
         <scea.dom.editors name="SXT Physics" category="SXT Objects" image="LevelEditorCore.Resources.ExtensionManip16.png" menuText="SXT Physics" description="SXT Physics"/>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
-      <xs:extension base="gameObjectGroupType">
+      <xs:extension base="locatorType">
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -63,8 +68,7 @@
       <xs:extension base="locatorType">
       </xs:extension>
     </xs:complexContent>
-  </xs:complexType>
-  
+  </xs:complexType> 
 
     <!-- Render component, a game component that contains or generate renderable geometry-->
     <xs:complexType name="renderComponentType" abstract="true">
