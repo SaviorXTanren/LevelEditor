@@ -175,3 +175,6 @@ UpgradeLog*.htm
 FakesAssemblies/
 
 build/
+build/LevelEditor.vs2015.VC.db
+build/LevelEditor.vs2015.VC.db
+build/LevelEditor.vs2015.VC.db

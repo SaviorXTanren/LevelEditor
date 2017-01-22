@@ -278,6 +278,13 @@ namespace LevelEditor
             sxtGraphics.resourceChild = sxtGraphics.Type.GetChildInfo("resource");
             sxtGraphics.stmRefChild = sxtGraphics.Type.GetChildInfo("stmRef");
 
+            sxtRoom.Type = getNodeType("gap", "sxtRoom");
+            sxtRoom.nameAttribute = sxtRoom.Type.GetAttributeInfo("name");
+            sxtRoom.visibleAttribute = sxtRoom.Type.GetAttributeInfo("visible");
+            sxtRoom.lockedAttribute = sxtRoom.Type.GetAttributeInfo("locked");
+            sxtRoom.gameObjectChild = sxtRoom.Type.GetChildInfo("gameObject");
+            sxtRoom.folderChild = sxtRoom.Type.GetChildInfo("folder");
+
             renderComponentType.Type = getNodeType("gap", "renderComponentType");
             renderComponentType.nameAttribute = renderComponentType.Type.GetAttributeInfo("name");
             renderComponentType.activeAttribute = renderComponentType.Type.GetAttributeInfo("active");
@@ -1012,6 +1019,16 @@ namespace LevelEditor
             public static ChildInfo componentChild;
             public static ChildInfo resourceChild;
             public static ChildInfo stmRefChild;
+        }
+
+        public static class sxtRoom
+        {
+            public static DomNodeType Type;
+            public static AttributeInfo nameAttribute;
+            public static AttributeInfo visibleAttribute;
+            public static AttributeInfo lockedAttribute;
+            public static ChildInfo gameObjectChild;
+            public static ChildInfo folderChild;
         }
 
         public static class renderComponentType

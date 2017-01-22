@@ -86,7 +86,19 @@
       <xs:extension base="locatorType">
       </xs:extension>
     </xs:complexContent>
-  </xs:complexType> 
+  </xs:complexType>
+
+  <xs:complexType name="sxtRoom">
+    <xs:annotation>
+      <xs:appinfo>
+        <scea.dom.editors name="SXT Room" category="SXT Objects" image="LevelEditorCore.Resources.Wireframe16.png" menuText="SXT Room" description="SXT Room"/>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="gameObjectFolderType">
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
 
     <!-- Render component, a game component that contains or generate renderable geometry-->
     <xs:complexType name="renderComponentType" abstract="true">
