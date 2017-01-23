@@ -15,14 +15,13 @@
         <LeGe.NativeType nativeName="Locator"/>
         <scea.dom.editors name="SXT Basic GameObject" category="SXT Objects" image="LevelEditorCore.Resources.game.png" menuText="SXT Basic GameObject" description="SXT Basic GameObject"/>
         <scea.dom.editors.attribute name="type" displayName="Type" description="The type of SXT GameObject"/>
+        <scea.dom.editors.attribute name="target" displayName="Target" description="The target name of SXT GameObject"/>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="locatorType">
-        <xs:sequence>
-          <xs:element name="target" type="gameObjectType" minOccurs="0" maxOccurs="1" />
-        </xs:sequence>
         <xs:attribute name="type" type="xs:string" />
+        <xs:attribute name="target" type="xs:string" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -33,14 +32,13 @@
         <LeGe.NativeType nativeName="GameObjectGroup"/>
         <scea.dom.editors name="SXT GameObject" category="SXT Objects" image="LevelEditorCore.Resources.cubes.png" menuText="SXT GameObject" description="SXT GameObject"/>
         <scea.dom.editors.attribute name="type" displayName="Type" description="The type of SXT GameObject"/>
+        <scea.dom.editors.attribute name="target" displayName="Target" description="The target name of SXT GameObject"/>
       </xs:appinfo>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="gameObjectGroupType">
-        <xs:sequence>
-          <xs:element name="target" type="gameObjectType" minOccurs="0" maxOccurs="1" />
-        </xs:sequence>
         <xs:attribute name="type" type="xs:string" />
+        <xs:attribute name="target" type="xs:string" />
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

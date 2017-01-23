@@ -178,10 +178,10 @@ namespace LevelEditor
             sxtBasicGameObject.lockedAttribute = sxtBasicGameObject.Type.GetAttributeInfo("locked");
             sxtBasicGameObject.transformationTypeAttribute = sxtBasicGameObject.Type.GetAttributeInfo("transformationType");
             sxtBasicGameObject.typeAttribute = sxtBasicGameObject.Type.GetAttributeInfo("type");
+            sxtBasicGameObject.targetAttribute = sxtBasicGameObject.Type.GetAttributeInfo("target");
             sxtBasicGameObject.componentChild = sxtBasicGameObject.Type.GetChildInfo("component");
             sxtBasicGameObject.resourceChild = sxtBasicGameObject.Type.GetChildInfo("resource");
             sxtBasicGameObject.stmRefChild = sxtBasicGameObject.Type.GetChildInfo("stmRef");
-            sxtBasicGameObject.targetChild = sxtBasicGameObject.Type.GetChildInfo("target");
 
             locatorType.Type = getNodeType("gap", "locatorType");
             locatorType.transformAttribute = locatorType.Type.GetAttributeInfo("transform");
@@ -232,9 +232,9 @@ namespace LevelEditor
             sxtGameObject.lockedAttribute = sxtGameObject.Type.GetAttributeInfo("locked");
             sxtGameObject.transformationTypeAttribute = sxtGameObject.Type.GetAttributeInfo("transformationType");
             sxtGameObject.typeAttribute = sxtGameObject.Type.GetAttributeInfo("type");
+            sxtGameObject.targetAttribute = sxtGameObject.Type.GetAttributeInfo("target");
             sxtGameObject.componentChild = sxtGameObject.Type.GetChildInfo("component");
             sxtGameObject.gameObjectChild = sxtGameObject.Type.GetChildInfo("gameObject");
-            sxtGameObject.targetChild = sxtGameObject.Type.GetChildInfo("target");
 
             sxtState.Type = getNodeType("gap", "sxtState");
             sxtState.transformAttribute = sxtState.Type.GetAttributeInfo("transform");
@@ -893,10 +893,10 @@ namespace LevelEditor
             public static AttributeInfo lockedAttribute;
             public static AttributeInfo transformationTypeAttribute;
             public static AttributeInfo typeAttribute;
+            public static AttributeInfo targetAttribute;
             public static ChildInfo componentChild;
             public static ChildInfo resourceChild;
             public static ChildInfo stmRefChild;
-            public static ChildInfo targetChild;
         }
 
         public static class locatorType
@@ -965,9 +965,9 @@ namespace LevelEditor
             public static AttributeInfo lockedAttribute;
             public static AttributeInfo transformationTypeAttribute;
             public static AttributeInfo typeAttribute;
+            public static AttributeInfo targetAttribute;
             public static ChildInfo componentChild;
             public static ChildInfo gameObjectChild;
-            public static ChildInfo targetChild;
         }
 
         public static class sxtState
